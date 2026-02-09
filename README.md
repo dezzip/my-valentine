@@ -114,26 +114,13 @@ body {
 }
 ```
 
-## Idées d'amélioration
+## Licence
 
-- Partager sur les réseaux sociaux
-- Ajouter des effets visuels au survol des boutons
-- Ajouter un compteur de partages
-- Créer des thèmes personnalisables
-- Intégrer des musiques de fond
-- Ajouter un mode sombre
-- Créer une version mobile optimisée
-- Ajouter des emojis animés
-- Mémoriser les réponses en localStorage
-- Ajouter un formulaire pour personnaliser le message
+Ce projet est libre d'utilisation. Amusez-vous bien !
 
 ## Crédit
 
 Créé par [Dezzip](https://github.com/dezzip)
-
-## Licence
-
-Ce projet est libre d'utilisation. Amusez-vous bien !
 
 ---
 

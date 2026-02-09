@@ -48,12 +48,17 @@ function moveNoButton() {
 }
 
 function handleYesClick() {
-  titleElement.innerHTML = "Yayyy!! 💝";
+  titleElement.innerHTML = "Yayyy!! <br> Welcome to my Jurassic Park!";
   buttonsContainer.classList.add("hidden");
   changeImage("aplaga happy ");
   
-  // Jouer le son de succès
+  // Jouer le son de succes
   playSound("success-sound");
+  
+  // Jouer la musique Jurassic Park apres 1 seconde
+  setTimeout(() => {
+    playSound("jurassic-park");
+  }, 1000);
   
   // Créer des confettis
   createConfetti();
