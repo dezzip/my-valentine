@@ -5,13 +5,23 @@ const buttonsContainer = document.querySelector(".buttons");
 const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
 const catImg = document.querySelector(".cat-img");
-
-const MAX_IMAGES = 1;
+const counterElement = document.querySelector("#counter");
+const confettiContainer = document.getElementById("confetti-container");
 
 let play = true;
 let noCount = 0;
 
 yesButton.addEventListener("click", handleYesClick);
+
+// Au clic, on déplace juste le bouton sans compter comme un vrai clic
+noButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  moveNoButton();
+});
+
+// Déplacement aléatoire du bouton Non au survol ET au clic
+noButton.addEventListener("mouseenter", moveNoButton);
+noButton.addEventListener("mouseover", moveNoButton);
 
 // Fonction pour déplacer le bouton Non
 function moveNoButton() {
@@ -28,22 +38,25 @@ function moveNoButton() {
   noButton.style.left = randomX + "px";
   noButton.style.top = randomY + "px";
   noButton.style.zIndex = "1000";
+  
+  // Incrémenter le compteur
+  noCount++;
+  updateCounter();
+  
+  // Jouer le son
+  playSound("click-sound");
 }
 
-// Déplacement aléatoire du bouton Non au survol ET au clic
-noButton.addEventListener("mouseenter", moveNoButton);
-noButton.addEventListener("mouseover", moveNoButton);
-
-// Au clic, on déplace juste le bouton sans compter comme un vrai clic
-noButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  moveNoButton();
-});
-
 function handleYesClick() {
-  titleElement.innerHTML = "Yayyy!! :3";
+  titleElement.innerHTML = "Yayyy!! 💝";
   buttonsContainer.classList.add("hidden");
   changeImage("aplaga happy ");
+  
+  // Jouer le son de succès
+  playSound("success-sound");
+  
+  // Créer des confettis
+  createConfetti();
 }
 
 function resizeYesButton() {
@@ -52,20 +65,6 @@ function resizeYesButton() {
   const newFontSize = fontSize * 1.3;
 
   yesButton.style.fontSize = `${newFontSize}px`;
-}
-
-function generateMessage(noCount) {
-  const messages = [
-    "Non",
-    "Tu es sûr(e)?",
-    "S'il te plaît...",
-    "Ne fais pas ça :(",
-    "Tu me brises le coeur",
-    "Je vais pleurer...",
-  ];
-
-  const messageIndex = Math.min(noCount, messages.length - 1);
-  return messages[messageIndex];
 }
 
 function changeImage(image) {
@@ -78,6 +77,38 @@ function changeImage(image) {
   }
 }
 
-function updateNoButtonText() {
-  noButton.innerHTML = generateMessage(noCount);
+function updateCounter() {
+  counterElement.textContent = noCount;
+}
+
+// Fonction pour jouer les sons
+function playSound(soundId) {
+  const audio = document.getElementById(soundId);
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(err => console.log("Son non disponible:", err));
+  }
+}
+
+// Fonction pour créer des confettis
+function createConfetti() {
+  const colors = ["#f53699", "#40c057", "#ffd700", "#ff69b4", "#00bfff"];
+  
+  // Créer 50 confettis
+  for (let i = 0; i < 50; i++) {
+    setTimeout(() => {
+      const confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.left = Math.random() * 100 + "%";
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.width = Math.random() * 10 + 5 + "px";
+      confetti.style.height = confetti.style.width;
+      confetti.style.borderRadius = Math.random() > 0.5 ? "50%" : "0%";
+      
+      confettiContainer.appendChild(confetti);
+      
+      // Supprimer après l'animation
+      setTimeout(() => confetti.remove(), 3000);
+    }, i * 30);
+  }
 }

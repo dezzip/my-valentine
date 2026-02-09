@@ -16,6 +16,7 @@
     <main class="container">
       <img class="cat-img" src="img/alpaga.gif" alt="Alpaga animé" />
       <p class="title">Coucou petit koala, veux tu être mon/ma Valentine?</p>
+      <div class="counter">Tentatives: <span id="counter">0</span></div>
       <div class="buttons">
         <button type="button" class="btn btn--yes">Oui</button>
         <button type="button" class="btn btn--no">Non</button>
@@ -23,6 +24,17 @@
     </main>
 
     <div class="credit">Crédit: Jeremy</div>
+    
+    <!-- Conteneur pour les confettis -->
+    <div id="confetti-container"></div>
+
+    <!-- Éléments audio -->
+    <audio id="click-sound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" type="audio/wav">
+    </audio>
+    <audio id="success-sound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRl4AAABXQVZFZM10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQoAAAAAAAAAAAA=" type="audio/wav">
+    </audio>
 
     <script src="script.js"></script>
   </body>
