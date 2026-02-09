@@ -129,7 +129,7 @@ body {
 
 ## Crédit
 
-Créé par Jeremy Dezzip
+Créé par Dezzip
 
 ## Licence
 
