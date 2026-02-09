@@ -129,7 +129,7 @@ body {
 
 ## Crédit
 
-Créé par Dezzip
+Créé par [Dezzip](https://github.com/dezzip)
 
 ## Licence
 

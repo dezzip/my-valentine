@@ -141,6 +141,17 @@ body {
   opacity: 0.7;
 }
 
+.credit a {
+  color: #f53699;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.credit a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .counter {
   position: fixed;
   top: 1rem;
