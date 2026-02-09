@@ -116,16 +116,20 @@ body {
 
 ## Idées d'amélioration
 
-- Ajouter des sons
-- Ajouter des confettis quand on clique sur "Oui"
-- Mode sombre
 - Partager sur les réseaux sociaux
-- Ajouter plus d'animations CSS
-- Compteur de tentatives de clic sur "Non"
+- Ajouter des effets visuels au survol des boutons
+- Ajouter un compteur de partages
+- Créer des thèmes personnalisables
+- Intégrer des musiques de fond
+- Ajouter un mode sombre
+- Créer une version mobile optimisée
+- Ajouter des emojis animés
+- Mémoriser les réponses en localStorage
+- Ajouter un formulaire pour personnaliser le message
 
 ## Crédit
 
-Créé par Jeremy
+Créé par Jeremy Dezzip
 
 ## Licence
 
