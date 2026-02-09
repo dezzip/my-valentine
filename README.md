@@ -20,8 +20,10 @@ Une page interactive et amusante pour demander à quelqu'un d'être votre Valent
 
 ## 🎥 Démonstration
 
+Visitez le projet sur GitHub : **[https://github.com/dezzip/my-valentine](https://github.com/dezzip/my-valentine)**
+
 ![Demo](demo.gif)
-> *Ajoutez votre GIF de démonstration ici en remplaçant `demo.gif`*
+> *GIF de démonstration disponible dans le repository*
 
 ## 🚀 Installation
 
@@ -29,7 +31,7 @@ Une page interactive et amusante pour demander à quelqu'un d'être votre Valent
 
 1. **Clonez le repository**
 ```bash
-git clone https://github.com/votre-username/my-valentine.git
+git clone https://github.com/dezzip/my-valentine.git
 cd my-valentine
 ```
 
@@ -137,4 +139,4 @@ Ce projet est libre d'utilisation. Amusez-vous bien ! 🎉
 
 ---
 
-⭐ Si vous aimez ce projet, n'hésitez pas à lui donner une étoile !
+⭐ **Projet sur GitHub** : [https://github.com/dezzip/my-valentine](https://github.com/dezzip/my-valentine)
