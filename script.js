@@ -34,15 +34,10 @@ function moveNoButton() {
 noButton.addEventListener("mouseenter", moveNoButton);
 noButton.addEventListener("mouseover", moveNoButton);
 
+// Au clic, on déplace juste le bouton sans compter comme un vrai clic
 noButton.addEventListener("click", function (e) {
   e.preventDefault();
-  if (play) {
-    noCount++;
-    changeImage("alpaga-sad");
-    resizeYesButton();
-    updateNoButtonText();
-    moveNoButton(); // Bouge aussi au clic
-  }
+  moveNoButton();
 });
 
 function handleYesClick() {
