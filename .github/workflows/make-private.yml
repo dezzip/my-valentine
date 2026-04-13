@@ -2,9 +2,6 @@ name: Make Repository Private
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   administration: write
